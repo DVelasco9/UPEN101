@@ -1,0 +1,59 @@
+Algoritmo byte
+	
+	kbyte = data / 1024
+	
+	Mbyte = data / 1048576
+	
+	Gbyte = data / 1073741824
+	
+	Tbyte = data / 1099511627776
+	
+	Pbyte = data / 1125899906842624
+	
+		
+		// Solicitud para ingresar la cantidad de bytes
+		Escribir "Ingrese la cantidad de bytes: "
+		Leer bytes
+		
+		// Convertir a KB 
+		resultado = bytes / 1024
+		
+		Si bytes < 1024 Entonces
+			unidad = "Bytes"
+			Escribir bytes, " ", unidad
+		Sino
+			// Convertir a KB
+			Si resultado < 1024 Entonces
+				unidad = "KB"
+				Escribir resultado, " ", unidad
+		Sino
+			// Convertir a MB 
+			resultado = resultado / 1024
+			Si resultado < 1024 Entonces
+				unidad = "MB"
+				Escribir resultado, " ", unidad
+			Sino
+				// Convertir a GB 
+				resultado = resultado / 1024
+				Si resultado < 1024 Entonces
+					unidad = "GB"
+					Escribir resultado, " ", unidad
+				Sino
+					// Convertir a TB 
+					resultado = resultado / 1024
+					Si resultado < 1024 Entonces
+						unidad = "TB"
+						Escribir resultado, " ", unidad
+					Sino
+						// Convertir a PB 
+						resultado = resultado / 1024
+						unidad = "PB"
+						Escribir resultado, " ", unidad
+						
+						FinSi
+					FinSi
+				FinSi
+			FinSi
+		FinSi
+		
+FinAlgoritmo
