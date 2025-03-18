@@ -1,0 +1,32 @@
+Algoritmo mayoridad
+	
+	//Datos para la Primera Variable 
+	Escribir "Ingresa El Primer Numero: "
+	Leer  num1
+	
+	//Datos de Segunda variable 
+	Escribir "Ingresa el Segundo Numero: "
+	Leer num2 
+	
+	Si num1 > num2 Entonces
+		
+		Escribir "El numero mayor es: ", num1
+		Escribir "El numero menor es: ",num2
+		
+	SiNo
+		
+		Si num2 > num1 Entonces
+			
+			Escribir "El numero mayor es: ",num2
+			Escribir "El numero menor es: ",num1
+			
+		SiNo
+			
+			Escribir "Los Numeros son Iguales."
+			
+		Fin Si
+		
+	Fin Si
+	
+	
+FinAlgoritmo
