@@ -1,0 +1,39 @@
+Algoritmo ValidarStorage
+   
+	
+	Escribir "Introduce la contraseña:"
+    Leer pass
+	
+    Mientras pass <> "Hola69" Hacer
+        Escribir "Contraseña incorrecta. Inténtalo de nuevo:"
+        Leer pass
+    FinMientras
+	
+	storage <- 0
+	
+    Escribir "Bienvenido al Sistema"
+	Escribir "Seleccione una Accion (Valor Numerico): "
+	Escribir " [1] Registrar Piezas  [0000] Salir"
+	Leer value
+	
+	Mientras value = "1" Hacer
+		
+		Escribir "Ingrese el Numero de Piezas Fabricadas:  "
+		Leer fix 
+		
+		storage = storage + fix
+		
+		Escribir " [1] Registrar Piezas  [0000] Salir"
+		Leer value
+		
+	Fin Mientras
+	
+	Si storage >= 10000 Entonces
+		Escribir "Goal Accomplished "
+	SiNo
+		
+		Escribir "Alert ... Alert ... Alert "
+		
+	Fin Si
+	
+FinAlgoritmo
