@@ -1,0 +1,35 @@
+Algoritmo Alumnos
+	
+	Escribir "Ingrese el nombre del alumno: "
+    Leer nombreAlumno
+	
+    Escribir "Ingrese la cantidad de materias a calificar: "
+    Leer cantidadMaterias
+	
+    sumaCalificaciones <- 0
+	
+    Para i <- 1 Hasta cantidadMaterias Con Paso 1 Hacer
+        Escribir "Ingrese la calificación de la materia ", i, ": "
+        Leer calificacion
+		
+        sumaCalificaciones <- sumaCalificaciones + calificacion
+    FinPara
+	
+    promedio <- sumaCalificaciones / cantidadMaterias
+	
+    Si promedio > 6 Entonces
+        mensaje <- "Aprobó"
+    SiNo
+        mensaje <- "Necesitará recursamiento"
+    FinSi
+	
+    Si promedio = 10 Entonces
+        mensaje <- "Alumno destacado"
+    FinSi
+	
+    Escribir "Reporte Final"
+    Escribir "Nombre del alumno: ", nombreAlumno
+    Escribir "Promedio final: ", promedio
+    Escribir "Resultado: ", mensaje
+	
+FinAlgoritmo
