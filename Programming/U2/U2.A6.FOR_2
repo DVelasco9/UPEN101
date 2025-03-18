@@ -1,0 +1,46 @@
+Algoritmo zapatero
+		
+		Escribir "Ingrese la cantidad de vendedores a registrar: "
+		Leer sellers
+		
+		Para i <- 1 Hasta sellers Con Paso 1 Hacer
+			total <- 0
+			max_sell <- 0
+			plus_sells <- 0
+			
+			Escribir "Ingrese la cantidad de ventas realizadas por el vendedor ", i, ": "
+			Leer n_sells
+			
+			Para x <- 1 Hasta n_sells Con Paso 1 Hacer
+				Escribir "Ingrese el valor de la venta ", x, ": "
+				Leer value
+				
+				total <- total + value
+				
+				plus_sells <- plus_sells + value
+				
+				Si value > max_sell Entonces
+					max_sell <- value
+				FinSi
+			FinPara
+			
+			plus_sells <- plus_sells + value
+			
+			Escribir "Total de ventas del vendedor ", i, ": $", total
+			Escribir "Número de ventas realizadas por el vendedor ", i, ": ", n_sells
+			Escribir "La venta más alta del vendedor ", i, ": $", max_sell
+			
+			Si max_sell < 100 O total < 1500 Entonces
+				Escribir "Por favor, pase a Recursos Humanos."
+			FinSi
+		FinPara
+		
+		Escribir "-----Reporte Final-----"
+		Escribir "Total de Vendedores Registrados: ",sellers
+		Escribir "Venta Total: ",plus_sells
+		Si plus_sells >= 20000 Entonces
+			Escribir "Se Alcanzó la meta"
+		SiNo
+			Escribir "Habrá que convocar una reunión"
+		Fin Si
+FinAlgoritmo
