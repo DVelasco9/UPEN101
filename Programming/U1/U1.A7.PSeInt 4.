@@ -1,0 +1,64 @@
+Algoritmo a7_prg
+	
+	//Contexto : sistema de evaluación preliminar para otorgar un crédito
+	
+	// Condiciones : 
+	
+	// prospecto deberá tener al menos 18 años de edad
+	
+	//  ingreso de al menos $4,000 al mes
+	
+	//deberá tener al menos 2 años trabajando
+	
+	//préstamo máximo sería de máximo un 15% del salario mensual del prospecto multiplicado por 12 mensualidades
+	
+	//si el prospecto tiene al menos $10,000 de saldo en su cuenta de banco
+	//o si el préstamo es para una cuestión médica, su crédito será aprobado automáticamente
+	
+	// Datos a Recopilar : Edad,Ingresos Mensuales, años trabajando, Saldo en Cuenta y Motivo <Medico> o <Personal> o <Carro>
+	
+	
+	//IngresoDeDatos
+	
+	Escribir "Ingresa Tu Nombre: "
+	Leer Name
+	
+	Escribir "Ingresa Tu Edad: "
+	Leer age
+	
+	Escribir "Ingresa Tus Ingresos Mensuales (Valor Numerico > 0000): "
+	Leer income
+	
+	Escribir "Ingresa tu Numero de Años Trabajando (Valor Numerico) : "
+	Leer work_years
+	
+	Escribir "Ingresa el Saldo Total de tu Cuenta: "
+	Leer savings
+	
+	Escribir "Selecciona el Motivo de tu Prestamo: (1)Personal (2)Medico (3)Transporte "
+	Leer reason
+	
+	credito_mx = income * 0.15 * 12
+	
+	Si reason = 2 o savings >= 10000 Entonces
+		Escribir "Credito Aprobado, Felicidades ! ",Name
+		Escribir "Edad: ",age
+		Escribir "Ingresos: ",income
+		Escribir "Monto Maximo Aprobado: ",credito_mx
+		Escribir "Status: Aprobado"
+	SiNo
+		Si age >= 18 y income >= 4000 y work_years >= 2 y savings >= 10000  Entonces
+			
+			Escribir "Credito Aprobado, Felicidades ! ",Name
+			Escribir "Edad: ",age
+			Escribir "Ingresos: ",income
+			Escribir "Monto Maximo Aprobado: ",credito_mx
+			Escribir "Status: Aprobado"
+			
+		SiNo
+			Escribir "No eres Elegible para un Credito Dentro de esta Institución."
+		Fin Si
+	Fin Si
+		
+	
+FinAlgoritmo
