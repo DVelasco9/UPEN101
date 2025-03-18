@@ -1,0 +1,117 @@
+Algoritmo TeclasProd
+	
+	Escribir "Enter the Password: "
+	Leer pass
+	
+	Mientras pass <> "2005-10-11" Hacer
+		Escribir "Incorrect Password, Try again ..."
+		Escribir "Enter the Password: "
+		Leer pass
+	Fin Mientras
+	
+	Escribir "Want to make records of : Tomatoes [2] Carrots [1] "
+	Leer z
+	
+	Si z = 1 Entonces
+		
+		Escribir "How many boxes are going to be registered: "
+		Leer boxes
+		
+		Para x <- 1 Hasta boxes Con Paso 1 Hacer
+			
+			total = 0
+			sum = 0
+			
+			Escribir "Write the Value for Box ",x,":"
+			Leer value
+			
+			total = total + value
+			
+		Fin Para
+		sum = sum + value
+	SiNo
+		
+		Si z = 2 Entonces
+			
+			Escribir "How many boxes are going to be registered: [100001] for Exit "
+			Leer boxes
+			
+			Si boxes = 100001 Entonces
+				
+				Escribir "Thanks for your using the App ..."
+
+			Fin Si
+			
+			Para x <- 1 Hasta boxes Con Paso 1 Hacer
+				
+				total = 0
+				sum = 0
+				
+				Escribir "Write the Value for Box ",x,":"
+				Leer value
+				
+				total = total + value
+				
+			Fin Para
+			sum = sum + value
+			
+		SiNo
+			Escribir "Incorrect Value ..."
+		Fin Si
+	Fin Si
+	
+	Escribir "Are you going to need Shipping ? [1] Yes [2] No"
+	Leer send
+	
+	Si send = 1 Entonces
+		ship = 150
+	Fin Si
+	
+	Si z = 1 Entonces
+		
+		
+		box_w = total * 5 //Peso en kg x Caja
+		box_value = (total * box_w) * 15.84 
+		
+		
+		Si box_value >= 10000 Entonces
+			new_value = box_value * .75
+			Escribir "You Choose Option: ",z," Carrots"
+			Escribir "You added a total of: ",boxes," Boxes"
+			Escribir "The total weight is:  ",box_w," Kg"
+			Escribir "Total to Pay $",new_value + ship
+			
+		SiNo
+			
+			Escribir "You Choose Option: ",z," Carrots"
+			Escribir "You added a total of: ",boxes," Boxes"
+			Escribir "The total weight is:  ",box_w," Kg"
+			Escribir "Total to Pay $",box_value + ship
+			
+		Fin Si
+		
+	SiNo
+		
+		box_w = total * 5 //Peso en kg x Caja
+		box_value = (total * box_w) * 11.34
+		
+		Si box_value >= 10000 Entonces
+			new_value = box_value * .75
+			
+			Escribir "You Choose Option: ",z," Carrots"
+			Escribir "You added a total of: ",boxes," Boxes"
+			Escribir "The total weight is:  ",box_w," Kg"
+			Escribir "Total to Pay $",new_value + ship
+			
+		SiNo
+			
+			Escribir "You Choose Option: ",z," Tomatoes"
+			Escribir "You added a total of: ",boxes," Boxes"
+			Escribir "The total weight is:  ",box_w," Kg"
+			Escribir "Total to Pay $",box_value + ship
+			
+		Fin Si
+		
+	Fin Si
+	
+FinAlgoritmo
