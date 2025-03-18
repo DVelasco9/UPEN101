@@ -1,0 +1,111 @@
+Algoritmo Sellers
+	// El programa debe recibir los 4 valores de los vendedores
+	
+	Escribir "Ingresa el Primer Valor: "
+	Leer v1
+	
+	Escribir "Ingresa el Segundo Valor: "
+	Leer v2
+	
+	Escribir "Ingresa el Tercer Valor: "
+	Leer v3
+	
+	Escribir "Ingresa el Cuarto Valor: "
+	Leer v4
+	
+	// Determinar el mayor valor (top)
+	Si v1 >= v2 y v1 >= v3 y v1 >= v4 Entonces
+		top = v1
+	SiNo
+		Si v2 >= v1 y v2 >= v3 y v2 >= v4 Entonces
+			top = v2
+		SiNo
+			Si v3 >= v1 y v3 >= v2 y v3 >= v4 Entonces
+				top = v3
+			SiNo
+				top = v4
+			FinSi
+		FinSi
+	FinSi
+	
+	// Determinar el menor valor (bottom)
+	Si v1 <= v2 y v1 <= v3 y v1 <= v4 Entonces
+		bottom = v1
+	SiNo
+		Si v2 <= v1 y v2 <= v3 y v2 <= v4 Entonces
+			bottom = v2
+		SiNo
+			Si v3 <= v1 y v3 <= v2 y v3 <= v4 Entonces
+				bottom = v3
+			SiNo
+				bottom = v4
+			FinSi
+		FinSi
+	FinSi
+	
+	// Determinar los valores intermedios (middle y close_top)
+	Si (v1 > bottom y v1 < top) y (v2 > bottom y v2 < top) Entonces
+		Si v1 > v2 Entonces
+			close_top = v1
+			middle = v2
+		SiNo
+			close_top = v2
+			middle = v1
+		FinSi
+	SiNo
+		Si (v1 > bottom y v1 < top) y (v3 > bottom y v3 < top) Entonces
+			Si v1 > v3 Entonces
+				close_top = v1
+				middle = v3
+			SiNo
+				close_top = v3
+				middle = v1
+			FinSi
+		SiNo
+			Si (v1 > bottom y v1 < top) y (v4 > bottom y v4 < top) Entonces
+				Si v1 > v4 Entonces
+					close_top = v1
+					middle = v4
+				SiNo
+					close_top = v4
+					middle = v1
+				FinSi
+			SiNo
+				Si (v2 > bottom y v2 < top) y (v3 > bottom y v3 < top) Entonces
+					Si v2 > v3 Entonces
+						close_top = v2
+						middle = v3
+					SiNo
+						close_top = v3
+						middle = v2
+					FinSi
+				SiNo
+					close_top = v3
+					middle = v4
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+	
+	// Operaciones 
+	op1 = top - bottom
+	op2 = middle - bottom
+	op6 = top - close_top
+	op3 = close_top - middle
+	op4 = top + close_top + bottom + middle
+	op5 = op4 / 4
+	
+	// Mostrar los valores ordenados 
+	Escribir "Número Mayor es: ", top
+	Escribir "Número Medio es: ", close_top
+	Escribir "Número Penúltimo es: ", middle
+	Escribir "Número Menor es: ", bottom
+	
+	// Mostrar los resultados de las operaciones
+	Escribir "El resultado del 4 menos el 1: ", op1
+	Escribir "El resultado del 2 menos el 1: ", op2
+	Escribir "El resultado del 4 menos el 3: ", op6
+	Escribir "El resultado del 3 menos el 2: ", op3
+	Escribir "El Promedio es: ", op5
+	
+FinAlgoritmo
