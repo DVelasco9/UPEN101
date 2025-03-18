@@ -1,0 +1,37 @@
+Algoritmo Algoritmos
+	
+    // Datos a Ingresar Irrelevantes : 
+    Escribir("Ingrese el nombre del alumno: ")
+    Leer nombre
+    Escribir("Ingrese la edad del alumno: ")
+    Leer edad
+	
+    // Valores de cada cosa
+    Escribir "Ingresa tu calificación del examen, base 10, ( Valor de 30%): "
+    Leer examen
+    Escribir "Ingresa tu calificación de las tareas, base 10, ( Valor de 20%): "
+    Leer tareas
+    Escribir "Ingresa tu calificación de los trabajos en clase, base 10, ( Valor de 50%): "
+    Leer trabajosClase
+	
+    // promedio final
+    promedioFinal <- (examen * 0.30) + (tareas * 0.20) + (trabajosClase * 0.50)
+	
+    // aprobó o ne
+    si (promedioFinal >= 6) entonces
+        aprobo <- Verdadero
+    sino
+        aprobo <- Falso
+    fin si
+	
+	// Los Resultados 
+    Escribir"Alumno: ", nombre
+    Escribir"Edad: ", edad
+    Escribir "Calificación del examen: ", examen
+    Escribir "Calificación en tareas: ", tareas
+    Escribir "Calificación en trabajos en clase: ", trabajosClase
+    Escribir "Promedio final: ", promedioFinal
+    Escribir "Aprobó?: ", aprobo
+
+	
+FinAlgoritmo
