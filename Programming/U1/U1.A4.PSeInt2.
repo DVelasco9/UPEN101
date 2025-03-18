@@ -1,0 +1,32 @@
+Algoritmo tarea_a1
+    Escribir "Ingresa un numero que sera el Valor de R "
+    Leer radio
+    
+    Escribir "Ingresa un numero que sera el Valor de H "
+    Leer hipotenusa
+    
+    // Circulo 
+    valor_pi = 3.1416
+    
+    medio_circulo = valor_pi * radio^2
+    
+    area_circular_roja = medio_circulo / 4
+    
+    // Triangulo 
+    base = radio * 2
+    
+    altura = raiz(hipotenusa^2 - radio^2)
+    
+    area_triangulo = (base * altura) / 2
+    
+    area_previa = area_triangulo + area_circular_roja
+    
+    // Áreas a restar 
+    radio_mini = radio / 2
+    
+    mini_area = (valor_pi * radio_mini^2) / 2
+    
+    area_final = area_previa - mini_area
+    
+    Escribir "El resultado es: ", area_final
+FinAlgoritmo
